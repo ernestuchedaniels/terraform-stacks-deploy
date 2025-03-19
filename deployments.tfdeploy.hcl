@@ -8,7 +8,7 @@ identity_token "aws" {
 deployment "development" {
   inputs = {
     regions        = ["us-east-1"]
-    role_arn       = "arn:aws:iam::619071309594:role/stacks-Bluestrim-Terraform-Stacks"
+    role_arn       = "arn:aws:iam::619071309594:role/stacks-Bluestrum-Terraform-Stacks"
     identity_token = identity_token.aws.jwt
     default_tags   = { stacks-preview-example = "lambda-component-expansion-stack" }
   }
@@ -16,8 +16,8 @@ deployment "development" {
 
 deployment "production" {
   inputs = {
-    regions        = ["us-east-1", "us-west-1"]
-    role_arn       = "arn:aws:iam::619071309594:role/stacks-Bluestrim-Terraform-Stacks"
+    regions        = ["us-east-1"]
+    role_arn       = "arn:aws:iam::619071309594:role/stacks-Bluestrum-Terraform-Stacks"
     identity_token = identity_token.aws.jwt
     default_tags   = { stacks-preview-example = "lambda-component-expansion-stack" }
   }
